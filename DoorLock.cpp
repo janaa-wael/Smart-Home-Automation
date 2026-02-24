@@ -1,0 +1,24 @@
+#include <iostream>
+#include "DoorLock.h"
+
+DoorLock::DoorLock()
+{
+
+}
+
+void DoorLock::lock()
+{
+    state = LOCKED;
+    cout << "Door lock is locked." << endl;
+}
+
+void DoorLock::unlock()
+{
+    state = UNLOCKED;
+    cout << "Door lock is unlocked." << endl;
+}
+
+DoorLock::~DoorLock()
+{
+    cout << "Door Lock derived class is destroyed." << endl;
+}
