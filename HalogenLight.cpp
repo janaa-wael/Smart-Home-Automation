@@ -3,11 +3,13 @@
 
 void HalogenLight::turnOn()
 {
+    mode = ON;
     cout << "Halogen Light is turned on." << endl;
 }
     
 void HalogenLight::turnOff()
 {
+    mode = OFF;
     cout << "Halogen Light is turned off." << endl;
 }
 

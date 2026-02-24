@@ -4,11 +4,13 @@ using namespace std;
 
 void LEDLight::turnOn()
 {
+    mode = ON;
     cout << "Led Light is turned on" << endl;
 }
 
 void LEDLight::turnOff()
 {
+    mode = OFF;
     cout << "Led Light is turned off." << endl;
 }
 
