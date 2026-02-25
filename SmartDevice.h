@@ -2,10 +2,11 @@
 #include "Observer.h"
 using namespace std;
 
-class SmartDevice : public Observer
-{
-
+class SmartDevice {
+    string name;
 public:
+    SmartDevice();
+    SmartDevice(string name);
     virtual string getName() = 0;
     virtual ~SmartDevice() = default;
 };

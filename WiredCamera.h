@@ -7,6 +7,8 @@ class WiredCamera : public SecurityCamera {
 private:
 
 public:
+    WiredCamera();
+    WiredCamera(string name);
     void StartRecording();
     void StopRecording();
     void EnableVision();

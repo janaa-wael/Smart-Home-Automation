@@ -2,6 +2,17 @@
 #include "LEDLight.h"
 using namespace std;
 
+LEDLight::LEDLight()
+{
+
+}
+
+LEDLight::LEDLight(string name)
+: Light(name)
+{
+    
+}
+
 void LEDLight::turnOn()
 {
     mode = ON;

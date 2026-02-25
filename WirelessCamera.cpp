@@ -2,6 +2,18 @@
 #include "WirelessCamera.h"
 using namespace std;
 
+
+WirelessCamera::WirelessCamera()
+{
+
+}
+
+WirelessCamera::WirelessCamera(string name)
+: SecurityCamera(name)
+{
+
+}
+
 void WirelessCamera::StartRecording() 
 {
     rec_state = STARTED;

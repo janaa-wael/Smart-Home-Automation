@@ -12,6 +12,8 @@ protected:
         }LedMode;
         LedMode mode;
 public:
+    Light();
+    Light(string name);
     virtual void turnOn() = 0;
     virtual void turnOff() = 0;
     virtual void dim(int brightnessLevel) = 0;

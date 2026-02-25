@@ -22,7 +22,7 @@ private:
     vector<Observer*> observer;
 public:
     MotionSensor();
-
+    MotionSensor(string name);
     void detectMotion();
 
 };

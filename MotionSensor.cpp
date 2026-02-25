@@ -6,6 +6,12 @@ MotionSensor::MotionSensor()
 
 }
 
+MotionSensor::MotionSensor(string name)
+: SmartDevice(name)
+{
+
+}
+
 void MotionSensor::detectMotion()
 {
     state = MotionState::DETECTED;

@@ -2,6 +2,18 @@
 #include "WiredCamera.h"
 using namespace std;
 
+WiredCamera::WiredCamera()
+{
+
+}
+
+WiredCamera::WiredCamera(string name)
+: SecurityCamera(name)
+{
+
+}
+
+
 void WiredCamera::StartRecording()
 {
     cout << "Wired Camera started recording" << endl;

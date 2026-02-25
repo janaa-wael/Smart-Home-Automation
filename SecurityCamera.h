@@ -16,6 +16,8 @@ protected:
     RecordingState rec_state;
     NightVisionMode night_mode;
 public:
+    SecurityCamera();
+    SecurityCamera(string name);
     virtual void StartRecording() = 0;
     virtual void StopRecording() = 0;
     virtual void EnableVision() = 0;
