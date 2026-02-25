@@ -1,6 +1,8 @@
 #include <iostream>
+#include "Observer.h"
+using namespace std;
 
-class SmartDevice
+class SmartDevice : public Observer
 {
 
 public:
