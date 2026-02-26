@@ -1,4 +1,8 @@
+#ifndef SECURITY_CAMERA_H
+#define SECURITY_CAMERA_H
+
 #include <iostream>
+#include <memory>
 #include "SmartDevice.h"
 using namespace std;
 
@@ -23,3 +27,5 @@ public:
     virtual void EnableVision() = 0;
     virtual void DisableVision() = 0;
 };
+
+#endif

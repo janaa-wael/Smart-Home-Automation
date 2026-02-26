@@ -1,3 +1,6 @@
+#ifndef LIGHT_H
+#define LIGHT_H
+
 #include <iostream>
 #include "SmartDevice.h"
 
@@ -19,3 +22,5 @@ public:
     virtual void dim(int brightnessLevel) = 0;
     virtual ~Light();
 };
+
+#endif

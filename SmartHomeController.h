@@ -1,9 +1,16 @@
+#ifndef SMART_HOME_CONTROLLER_H
+#define SMART_HOME_CONTROLLER_H
+
 #include <iostream>
 #include <vector>
+#include <memory>
+#include <functional>
 #include <stack>
 #include "Command.h"
 #include "SmartDevice.h"
 #include "Observer.h"
+
+
 
 class SmartHomeController : public Observer{
 private:
@@ -17,3 +24,5 @@ public:
     void addCommand(shared_ptr<Command> command);
     void update() override;
 };
+
+#endif

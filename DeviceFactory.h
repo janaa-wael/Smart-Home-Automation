@@ -1,4 +1,9 @@
+#ifndef DEVICE_FACTORY_H
+#define DEVICE_FACTORY_H
+
 #include <iostream>
+#include <functional>
+#include <memory>
 #include "Light.h"
 #include "MotionSensor.h"
 #include "SecurityCamera.h"
@@ -16,3 +21,5 @@ public:
     shared_ptr<SecurityCamera> createSecurityCamera(string name);
     shared_ptr<DoorLock> createDoorLock(string name);
 };
+
+#endif

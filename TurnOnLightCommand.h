@@ -1,4 +1,9 @@
+#ifndef TURNON_LIGHT_COMM_H
+#define TURNON_LIGHT_COMM_H
+
 #include <iostream>
+#include <functional>
+#include <memory>
 #include "Command.h"
 #include "Light.h"
 
@@ -11,3 +16,5 @@ public:
     void execute() override;
     void undo() override;
 };
+
+#endif

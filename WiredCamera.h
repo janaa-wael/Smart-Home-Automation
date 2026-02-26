@@ -1,4 +1,5 @@
 #include <iostream>
+#include <memory>
 #include "SecurityCamera.h"
 
 using namespace std;

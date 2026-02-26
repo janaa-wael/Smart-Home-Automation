@@ -1,6 +1,11 @@
+#ifndef SMART_DEVICE
+#define SMART_DEVICE 
+
 #include <iostream>
+#include <memory>
 #include "Observer.h"
 using namespace std;
+
 
 class SmartDevice {
     string name;
@@ -10,3 +15,5 @@ public:
     virtual string getName() = 0;
     virtual ~SmartDevice() = default;
 };
+
+#endif

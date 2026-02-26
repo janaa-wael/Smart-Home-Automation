@@ -10,5 +10,5 @@ public:
     void attach(Observer* obs);
     void detach(Observer* obs);
     void update();
-    void notify();  
+    virtual void notify();  
 };

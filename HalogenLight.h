@@ -1,3 +1,6 @@
+#ifndef HALOGEN_LIGHT_H
+#define HALOGEN_LIGHT_H
+
 #include <iostream>
 #include "Light.h"
 using namespace std;
@@ -11,3 +14,5 @@ public:
     void dim(int brightnessLevel);
     virtual ~HalogenLight();
 };
+
+#endif

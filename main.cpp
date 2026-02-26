@@ -1,4 +1,6 @@
 #include <iostream>
+#include <memory>
+#include <functional>
 #include "Light.h"
 #include "LEDLight.h"
 #include "SmartHomeController.h"
@@ -21,8 +23,8 @@ int main()
     hub->addDevice(motion_sensor);    
     hub->addDevice(door_lock);
     hub->addDevice(motion_sensor);
-    Command* turn_on_light = new TurnOnLightCommand(led_light);
-    hub->addCommand(make_shared<Command>(turn_on_light));
+    shared_ptr<TurnOnLightCommand> turn_on_light = make_shared<TurnOnLightCommand>(led_light);
+    hub->addCommand(make_shared<TurnOnLightCommand>(turn_on_light));
     turn_on_light->execute();
     turn_on_light->undo();
 

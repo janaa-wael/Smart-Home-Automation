@@ -1,3 +1,6 @@
+#ifndef LED_LIGHT_H
+#define LED_LIGHT_H
+
 #include <iostream>
 #include "Light.h"
 using namespace std;
@@ -13,3 +16,5 @@ public:
     void dim(int brightnessLevel);
     virtual ~LEDLight();
 };
+
+#endif
