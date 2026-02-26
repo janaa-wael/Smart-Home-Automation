@@ -46,3 +46,8 @@ shared_ptr<SmartDevice> SmartHomeController::getDevice(string device_name)
     }
 }
 
+void SmartHomeController::addCommand(shared_ptr<Command> command)
+{
+    history.push(command);
+}
+

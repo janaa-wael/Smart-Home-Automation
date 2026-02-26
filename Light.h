@@ -3,7 +3,7 @@
 
 using namespace std;
 
-class Light : SmartDevice {
+class Light : public SmartDevice {
 protected:
         int brightnessLevel = 0;
         typedef enum {

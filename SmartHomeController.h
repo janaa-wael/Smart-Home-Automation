@@ -14,6 +14,6 @@ public:
     void removeDevice(shared_ptr<SmartDevice> device);
     void removeDevice(string device);
     shared_ptr<SmartDevice> getDevice(string device_name);
-
+    void addCommand(shared_ptr<Command> command);
     void update() override;
 };

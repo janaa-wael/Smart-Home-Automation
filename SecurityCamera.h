@@ -2,7 +2,7 @@
 #include "SmartDevice.h"
 using namespace std;
 
-class SecurityCamera : SmartDevice {
+class SecurityCamera : public SmartDevice {
 protected:
     typedef enum {
         STARTED,
