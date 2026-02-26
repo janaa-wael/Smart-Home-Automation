@@ -1,4 +1,6 @@
 #include <iostream>
+#include <vector>
+#include <algorithm>
 #include "SmartHomeController.h"
 
 
@@ -51,3 +53,7 @@ void SmartHomeController::addCommand(shared_ptr<Command> command)
     history.push(command);
 }
 
+ void SmartHomeController::update() 
+ {
+    cout << "Motion detected!" << endl;
+ }
