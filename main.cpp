@@ -4,6 +4,7 @@
 #include "SmartHomeController.h"
 #include "DeviceFactory.h"
 #include "WirelessCamera.h"
+#include "TurnOnLightCommand.h"
 using namespace std;
 
 int main()
@@ -20,4 +21,9 @@ int main()
     hub->addDevice(motion_sensor);    
     hub->addDevice(door_lock);
     hub->addDevice(motion_sensor);
+    Command* turn_on_light = new TurnOnLightCommand(led_light);
+    hub->addCommand(make_shared<Command>(turn_on_light));
+    turn_on_light->execute();
+    turn_on_light->undo();
+
 }

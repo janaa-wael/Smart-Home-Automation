@@ -4,6 +4,12 @@
 
 using namespace std;
 
+TurnOnLightCommand::TurnOnLightCommand(shared_ptr<Light> light)
+{
+    this->light = make_shared<Light>(light);
+}
+
+
 void TurnOnLightCommand::execute() 
 {
     light->turnOn();
