@@ -16,7 +16,7 @@ private:
         ACTIVE,
         INACTIVE
     };
-
+    vector<shared_ptr<Observer>> observers;
     MotionState state = MotionState::UNDETECTED;
     SensorStatus status = SensorStatus::INACTIVE;
     vector<Observer*> observer;
@@ -24,5 +24,6 @@ public:
     MotionSensor();
     MotionSensor(string name);
     void detectMotion();
+    void notify() override;
 
 };
