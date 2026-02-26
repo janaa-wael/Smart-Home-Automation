@@ -11,6 +11,19 @@ void SmartHomeController::update()
 }
 
 
+void SmartHomeController::executeCommand(shared_ptr<Command> cmd)
+{
+    cmd->execute();
+    history.push(cmd);
+}
+
+void SmartHomeController::undoLastCommand(void)
+{
+    shared_ptr<Command> command = history.top();
+    command->undo();
+    history.pop();
+}
+
 void SmartHomeController::addDevice(shared_ptr<SmartDevice> device)
 {
     devices.push_back(device);

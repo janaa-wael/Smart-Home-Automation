@@ -9,6 +9,7 @@
 #include "Command.h"
 #include "SmartDevice.h"
 #include "Observer.h"
+#include "Command.h"
 
 
 
@@ -22,6 +23,8 @@ public:
     void removeDevice(string device);
     shared_ptr<SmartDevice> getDevice(string device_name);
     void addCommand(shared_ptr<Command> command);
+    void undoLastCommand(void);
+    void executeCommand(shared_ptr<Command> cmd);
     void update() override;
 };
 
