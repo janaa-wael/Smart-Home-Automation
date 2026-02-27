@@ -5,12 +5,6 @@
 
 
 
-void SmartHomeController::update() 
-{
-    cout << "Smart Home Controller received Motion Event" << endl;
-}
-
-
 void SmartHomeController::executeCommand(shared_ptr<Command> cmd)
 {
     cmd->execute();
@@ -19,9 +13,12 @@ void SmartHomeController::executeCommand(shared_ptr<Command> cmd)
 
 void SmartHomeController::undoLastCommand(void)
 {
-    shared_ptr<Command> command = history.top();
-    command->undo();
-    history.pop();
+    if(!history.empty())
+    {
+        shared_ptr<Command> command = history.top();
+        command->undo();
+        history.pop();
+    }
 }
 
 void SmartHomeController::addDevice(shared_ptr<SmartDevice> device)
@@ -32,7 +29,10 @@ void SmartHomeController::addDevice(shared_ptr<SmartDevice> device)
 void SmartHomeController::removeDevice(shared_ptr<SmartDevice> device)
 {
     devices.erase(
-        remove(devices.begin(), devices.end(), device),
+        remove(devices.begin(), devices.end(), [device](shared_ptr<SmartDevice>d)
+        {
+            return d->getName() == device->getName();
+        }),
         devices.end()
     );
 }
@@ -59,6 +59,7 @@ shared_ptr<SmartDevice> SmartHomeController::getDevice(string device_name)
     {
         if(d->getName() == device_name) return d;
     }
+    return nullptr;
 }
 
 void SmartHomeController::addCommand(shared_ptr<Command> command)
