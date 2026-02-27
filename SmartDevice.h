@@ -12,6 +12,8 @@ class SmartDevice {
 public:
     SmartDevice();
     SmartDevice(string name);
+    virtual void activate() = 0;
+    virtual void deactivate() = 0;
     virtual string getName() = 0;
     virtual ~SmartDevice() = default;
 };
