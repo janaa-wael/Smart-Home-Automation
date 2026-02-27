@@ -19,6 +19,8 @@ public:
     Light(string name);
     virtual void turnOn() = 0;
     virtual void turnOff() = 0;
+    void activate();
+    void deactivate();
     virtual void dim(int brightnessLevel) = 0;
     virtual ~Light();
 };

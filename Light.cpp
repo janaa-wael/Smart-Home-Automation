@@ -14,6 +14,15 @@ Light::Light(string name)
 
 }
 
+void Light::activate()
+{
+    turnOn();
+}
+
+void Light::deactivate()
+{
+    turnOff();
+}
 
 Light::~Light()
 {
