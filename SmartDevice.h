@@ -9,12 +9,17 @@ using namespace std;
 
 class SmartDevice {
     string name;
+    typedef enum {
+        INACTIVE,
+        ACTIVE
+    }StatusType;
+    StatusType status = INACTIVE;
 public:
     SmartDevice();
     SmartDevice(string name);
     virtual void activate() = 0;
     virtual void deactivate() = 0;
-    virtual string getName() = 0;
+    string getName();
     virtual ~SmartDevice() = default;
 };
 
