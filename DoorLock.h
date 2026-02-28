@@ -19,6 +19,6 @@ public:
     void activate() override;
     void deactivate() override;
     virtual ~DoorLock();
-};)
+};
 
 #endif
