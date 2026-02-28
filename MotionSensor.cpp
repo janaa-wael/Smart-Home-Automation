@@ -28,12 +28,12 @@ void MotionSensor::notify()
 
 void MotionSensor::activate() 
 {
-    status = SensorStatus::ACTIVE;
+    status = ACTIVE;
 }
     
 void MotionSensor::deactivate() 
 {
-    status = SensorStatus::INACTIVE;
+    status = INACTIVE;
 }
 
 

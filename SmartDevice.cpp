@@ -11,3 +11,10 @@ SmartDevice::SmartDevice(string name)
 {
 
 }
+
+string SmartDevice::getName()
+{
+    return name;
+}
+
+

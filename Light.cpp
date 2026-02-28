@@ -16,11 +16,13 @@ Light::Light(string name)
 
 void Light::activate()
 {
+    status = ACTIVE;
     turnOn();
 }
 
 void Light::deactivate()
 {
+    status = INACTIVE;
     turnOff();
 }
 

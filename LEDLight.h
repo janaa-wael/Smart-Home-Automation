@@ -11,8 +11,8 @@ private:
 public:
     LEDLight();
     LEDLight(string name);
-    void turnOn();
-    void turnOff();
+    void turnOn() override;
+    void turnOff() override;
     void dim(int brightnessLevel);
     virtual ~LEDLight();
 };

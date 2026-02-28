@@ -9,10 +9,14 @@ using namespace std;
 
 class SmartDevice {
     string name;
+    
+protected:
+
     typedef enum {
         INACTIVE,
         ACTIVE
     }StatusType;
+
     StatusType status = INACTIVE;
 public:
     SmartDevice();

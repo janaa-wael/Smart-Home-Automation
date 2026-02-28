@@ -17,11 +17,6 @@ protected:
         DISABLED
     }NightVisionMode;
 
-    typedef enum {
-        ACTIVE,
-        INACTIVE
-    }Camera_Status;
-    Camera_Status status = INACTIVE;
     RecordingState rec_state;
     NightVisionMode night_mode;
 public:

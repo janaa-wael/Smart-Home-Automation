@@ -27,11 +27,11 @@ DoorLock::~DoorLock()
 void DoorLock::activate() 
 {
     status = ACTIVE;
-    Lock();
+    lock();
 }
 
 void DoorLock::deactivate() 
 {
-    status = ACTIVE;
+    status = SmartDevice::ACTIVE;
     unlock();
 }

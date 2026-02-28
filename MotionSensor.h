@@ -15,13 +15,9 @@ private:
         UNDETECTED
     };
 
-    enum class SensorStatus{
-        ACTIVE,
-        INACTIVE
-    };
+
     vector<shared_ptr<Observer>> observers;
     MotionState state = MotionState::UNDETECTED;
-    SensorStatus status = SensorStatus::INACTIVE;
     vector<Observer*> observer;
 public:
     MotionSensor();
