@@ -1,3 +1,6 @@
+#ifndef MOTION_SENSOR_H
+#define MOTION_SENSOR_H
+
 #include <iostream>
 #include <vector>
 #include "Subject.h"
@@ -25,5 +28,10 @@ public:
     MotionSensor(string name);
     void detectMotion();
     void notify() override;
+    void activate() override;
+    void deactivate() override;
+
 
 };
+
+#endif
