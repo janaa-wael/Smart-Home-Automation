@@ -6,7 +6,7 @@ using namespace std;
 
 TurnOnLightCommand::TurnOnLightCommand(shared_ptr<Light> light)
 {
-    this->light = make_shared<Light>(light);
+    this->light = light;
 }
 
 
