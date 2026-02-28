@@ -1,4 +1,6 @@
 #include <iostream>
+#include <algorithm>
+#include <vector>
 #include "Observer.h"
 #include "Subject.h"
 using namespace std;
@@ -19,7 +21,7 @@ void Subject::notify()
 void Subject::detach(Observer* obs)
 {
     observers.erase(
-      remove(observers.begin(), observers.end(), obs),
+      remove_if(observers.begin(), observers.end(), obs),
       observers.end()  
     );
 }
