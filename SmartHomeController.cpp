@@ -29,7 +29,7 @@ void SmartHomeController::addDevice(shared_ptr<SmartDevice> device)
 void SmartHomeController::removeDevice(shared_ptr<SmartDevice> device)
 {
     devices.erase(
-        remove(devices.begin(), devices.end(), [device](shared_ptr<SmartDevice>d)
+        remove_if(devices.begin(), devices.end(), [device](shared_ptr<SmartDevice>d)
         {
             return d->getName() == device->getName();
         }),
@@ -42,7 +42,7 @@ void SmartHomeController::removeDevice(string device)
     devices.erase(
         remove_if(devices.begin(), devices.end(), [device](shared_ptr<SmartDevice>d)
             {
-                d->getName() == device;
+                return d->getName() == device;
             }
         ),
         devices.end()
