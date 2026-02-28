@@ -17,6 +17,11 @@ protected:
         DISABLED
     }NightVisionMode;
 
+    typedef enum {
+        ACTIVE,
+        INACTIVE
+    }Camera_Status;
+    Camera_Status status = INACTIVE;
     RecordingState rec_state;
     NightVisionMode night_mode;
 public:
@@ -26,6 +31,9 @@ public:
     virtual void StopRecording() = 0;
     virtual void EnableVision() = 0;
     virtual void DisableVision() = 0;
+    void activate() override;
+    void deactivate() override;
+
 };
 
 #endif
