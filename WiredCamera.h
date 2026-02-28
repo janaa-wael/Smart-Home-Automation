@@ -1,3 +1,6 @@
+#ifndef LIGHT_COMMAND
+#define LIGHT_COMMAND
+
 #include <iostream>
 #include <memory>
 #include "SecurityCamera.h"
@@ -15,3 +18,5 @@ public:
     void EnableVision();
     void DisableVision();
 };
+
+#endif

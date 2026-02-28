@@ -1,3 +1,6 @@
+#ifndef WIRELESS_CAMERA
+#define WIRELESS_CAMERA
+
 #include <iostream>
 #include "SecurityCamera.h"
 
@@ -13,3 +16,5 @@ public:
     void DisableVision() override;
 
 };
+
+#endif

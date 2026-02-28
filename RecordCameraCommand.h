@@ -1,3 +1,5 @@
+#ifndef RECORD_CAMERA_H
+#define RECORD_CAMERA_H
 #include <iostream>
 #include "SecurityCamera.h"
 #include "Command.h"
@@ -10,3 +12,5 @@ public:
     void execute() override;
     void undo() override;
 };
+
+#endif
