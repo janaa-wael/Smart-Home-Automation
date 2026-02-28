@@ -14,6 +14,7 @@ private:
     LockedState state;
 public:
     DoorLock();
+    DoorLock(string name);
     void lock();
     void unlock();
     void activate() override;

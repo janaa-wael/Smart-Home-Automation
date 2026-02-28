@@ -6,6 +6,12 @@ DoorLock::DoorLock()
 
 }
 
+DoorLock::DoorLock(string name)
+: SmartDevice(name)
+{
+
+}
+
 void DoorLock::lock()
 {
     state = LOCKED;
