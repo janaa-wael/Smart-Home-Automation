@@ -22,3 +22,16 @@ DoorLock::~DoorLock()
 {
     cout << "Door Lock derived class is destroyed." << endl;
 }
+
+
+void DoorLock::activate() 
+{
+    status = ACTIVE;
+    Lock();
+}
+
+void DoorLock::deactivate() 
+{
+    status = ACTIVE;
+    unlock();
+}
