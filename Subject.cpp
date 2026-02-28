@@ -21,10 +21,7 @@ void Subject::notify()
 void Subject::detach(shared_ptr<Observer> obs)
 {
     observers.erase(
-      remove_if(observers.begin(), observers.end(), [obs](shared_ptr<Observer>o)
-    {
-        return obs == o;
-    }),
+      remove(observers.begin(), observers.end(), obs),
       observers.end()  
     );
 }
