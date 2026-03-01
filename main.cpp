@@ -11,7 +11,7 @@ using namespace std;
 
 int main()
 {
-    DeviceFactory* factory = new DeviceFactory();
+    /* DeviceFactory* factory = new DeviceFactory();
     shared_ptr<Light> led_light = factory->createLight("LED");
     shared_ptr<SecurityCamera> camera = factory->createSecurityCamera("Wireless");
     camera->StartRecording();
@@ -26,6 +26,8 @@ int main()
     shared_ptr<TurnOnLightCommand> turn_on_light = make_shared<TurnOnLightCommand>(led_light);
     hub->addCommand(make_shared<TurnOnLightCommand>(turn_on_light));
     turn_on_light->execute();
-    turn_on_light->undo();
+    turn_on_light->undo(); */
+    auto ptr = make_shared<LEDLight>();
+    ptr->activate();
 
 }
