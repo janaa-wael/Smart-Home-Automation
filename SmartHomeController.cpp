@@ -2,6 +2,7 @@
 #include <vector>
 #include <algorithm>
 #include "SmartHomeController.h"
+#include "Light.h"
 
 
 
@@ -80,6 +81,30 @@ void SmartHomeController::deactivateAllDevices()
 {
     for(auto& d : devices)
         d->deactivate();
+}
+
+
+void SmartHomeController::turnOnAllLights()
+{
+    for(auto& d : devices)
+    {
+        if(auto* light = dynamic_cast<Light*>(d.get()))
+        {
+            light->turnOn();
+        }
+    }
+}
+
+
+void SmartHomeController::turnOffAllLights()
+{
+    for(auto& d : devices)
+    {
+        if(auto* light = dynamic_cast<Light*>(d.get()))
+        {
+            light->turnOff();
+        }
+    }
 }
 
 

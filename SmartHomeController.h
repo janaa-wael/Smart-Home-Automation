@@ -27,6 +27,8 @@ public:
     shared_ptr<SmartDevice> getDevice(string device_name);
     void activateAllDevices();
     void deactivateAllDevices();
+    void SmartHomeController::turnOnAllLights();
+    void turnOffAllLights();
     void undoLastCommand(void);
     void executeCommand(shared_ptr<Command> cmd);
     void update() override;
