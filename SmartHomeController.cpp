@@ -26,6 +26,16 @@ void SmartHomeController::addDevice(shared_ptr<SmartDevice> device)
     devices.push_back(device);
 }
 
+bool SmartHomeController::hasDevice(string& name)
+{
+    for(auto& d : devices)
+    {
+        if(d->getName() == name) return true;
+    }
+    return false;
+}
+
+
 void SmartHomeController::removeDevice(shared_ptr<SmartDevice> device)
 {
     devices.erase(
