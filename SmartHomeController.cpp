@@ -68,6 +68,21 @@ shared_ptr<SmartDevice> SmartHomeController::getDevice(string device_name)
     return nullptr;
 }
 
+void SmartHomeController::activateAllDevices()
+{
+    for(auto& d : devices)
+    {
+        d->activate();
+    }
+}
+
+void SmartHomeController::deactivateAllDevices()
+{
+    for(auto& d : devices)
+        d->deactivate();
+}
+
+
 void SmartHomeController::addCommand(shared_ptr<Command> command)
 {
     history.push(command);

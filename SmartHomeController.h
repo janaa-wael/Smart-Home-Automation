@@ -25,6 +25,8 @@ public:
     void removeDevice(shared_ptr<SmartDevice> device);
     void removeDevice(string device);
     shared_ptr<SmartDevice> getDevice(string device_name);
+    void activateAllDevices();
+    void deactivateAllDevices();
     void undoLastCommand(void);
     void executeCommand(shared_ptr<Command> cmd);
     void update() override;
