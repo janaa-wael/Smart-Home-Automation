@@ -20,17 +20,25 @@ private:
     
     void addCommand(shared_ptr<Command> command);
 public:
+    // Devices Management Methods
     void addDevice(shared_ptr<SmartDevice> device);
     bool hasDevice(string& name);
     void removeDevice(shared_ptr<SmartDevice> device);
     void removeDevice(string device);
     shared_ptr<SmartDevice> getDevice(string device_name);
+    
+    // Facade Methods
     void activateAllDevices();
     void deactivateAllDevices();
     void SmartHomeController::turnOnAllLights();
     void turnOffAllLights();
+
     void undoLastCommand(void);
+
+    // Command Pattern 
     void executeCommand(shared_ptr<Command> cmd);
+
+    // Observer Methods
     void update() override;
 };
 
