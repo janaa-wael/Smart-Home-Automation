@@ -19,7 +19,7 @@ public:
     void setSwitchingMode(SwitchingMode mode);
     SwitchingMode getSwicthingMode();
     float readTemperature();
-    virtual void activate(SiwtchingMode mode);
+    virtual void activate(SwitchingMode mode);
     virtual void deactivate();
 
 } ;
