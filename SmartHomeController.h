@@ -9,7 +9,6 @@
 #include "Command.h"
 #include "SmartDevice.h"
 #include "Observer.h"
-#include "Command.h"
 
 
 
@@ -26,7 +25,7 @@ public:
     void removeDevice(shared_ptr<SmartDevice> device);
     void removeDevice(string device);
     shared_ptr<SmartDevice> getDevice(string device_name);
-    
+
     // Facade Methods
     void activateAllDevices();
     void deactivateAllDevices();
